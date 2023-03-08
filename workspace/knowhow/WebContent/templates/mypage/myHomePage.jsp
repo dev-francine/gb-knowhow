@@ -100,7 +100,7 @@
 			<c:choose>
 				<c:when test="${myInfo.resumeExistence eq false }">
 					<li>
-						<a href="javascript:gotoList('a');" id="myAnswerButton">나의 답변</a>
+						<a href="javascript:gotoList('a');" id="myAnswerButton">나의 답글</a>
 						<span class="num">(${countMyBoards.countAnswer})</span>
 					</li>
 				</c:when>

@@ -253,8 +253,14 @@ function openup(event){
 	$("#new-password").toggle();
 }
 
-
-
+$(document).ready(function(){
+	$(".second-body-table").hide();
+	$(".openup-button").click(function(e){
+		e.preventDefault();
+		$(".second-body-table").show();
+	})
+	
+})
 
 
 

@@ -103,6 +103,12 @@ public class MypageDAO {
 		return sqlSession.selectList("mypage.myCommentsInAnswer", memberId);
 	}
 	
+//	내가 쓴 댓글 in 답변
+	public List<MemberVO> selectMyProfile(Long memberId) {
+		System.out.println("DAO");
+		return sqlSession.selectList("mypage.selectMyProfile", memberId);
+	}
+	
 	
 	
 	

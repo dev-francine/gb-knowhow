@@ -136,8 +136,10 @@
 		WHERE member_id= #{memberId}
 	</update>
 	
-	
-	
+	<!-- 프로필 가져오기 -->
+	<select id="selectMyProfile" parameterType="long" resultType="memberVO">
+		select member_id, member_profile_system_name, member_profile_original_name from tbl_member where member_id = #{memberId}
+	</select>
 	
 	
 	

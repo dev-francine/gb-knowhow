@@ -28,7 +28,7 @@ public class MyUpdateInfoActionController implements Action {
 		MypageDAO mypageDAO = new MypageDAO();
 		ResumeDAO resumeDAO = new ResumeDAO();
 		Result result = new Result();
-		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/resume/";
+		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
 		int fileSize = 1024 * 1024 * 5; //5M
 		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 //		Long memberId = Long.valueOf(multipartRequest.getParameter("memberId"));
@@ -46,7 +46,14 @@ public class MyUpdateInfoActionController implements Action {
 			if(resume.exists()) {
 				resume.delete();
 			}
-		});;
+		});
+		
+		mypageDAO.selectMyProfile(memberId).stream().map(profile -> new File(uploadPath+profile.getMemberProfileSystemName())).forEach(profile -> {
+			if(profile.exists()) {
+				profile.delete();
+			}
+		});
+		
 	
 		mypageDAO.updateMyInfo(memberVO);
 		resumeDAO.deleteResume(memberId);

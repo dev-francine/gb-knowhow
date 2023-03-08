@@ -200,25 +200,26 @@
 								</td>
 							</tr>
 							</tbody>
-							<tbody class="second-body-table">
+							
 							<tr class="button">
 								<td><button class="openup-button save" style="width: 100%;" onclick="openup()">비밀번호 변경하기</button></td>
 							</tr>
 							
-							<tr id="new-password" class="new-password" >
-								<th>새로운 비밀번호</th>
-								<td>
-                                    <input type="password" id="password_input" placeholder="영어, 숫자, 특수문자 중 2가지 이상 10~20자">
-                                    <p class="help_password" style="color:coral"></p>
-								</td>
-							</tr> 
-							<tr id="new-password-check" class="new-password"  >
-								<th>비밀번호 확인</th>
-								<td>
-                                    <input type="password" id="new_password_check" placeholder="비밀번호">
-                                    <p class="help_password_confirm"></p>
-								</td>
-							</tr>
+							<tbody class="second-body-table">
+								<tr id="new-password" class="new-password" >
+									<th>새로운 비밀번호</th>
+									<td>
+	                                    <input type="password" id="password_input" placeholder="영어, 숫자, 특수문자 중 2가지 이상 10~20자">
+	                                    <p class="help_password" style="color:coral"></p>
+									</td>
+								</tr> 
+								<tr id="new-password-check" class="new-password"  >
+									<th>비밀번호 확인</th>
+									<td>
+	                                    <input type="password" id="new_password_check" placeholder="비밀번호">
+	                                    <p class="help_password_confirm"></p>
+									</td>
+								</tr>
 						</tbody>
 					</table>
 

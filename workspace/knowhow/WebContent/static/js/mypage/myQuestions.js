@@ -142,6 +142,7 @@ function showAskAdminList(){
 			</h4>
 		`
 		$field.html(text1);
+		$field2.html("");
 }
 
 /*function showAskAdminList(askAdmins){
@@ -402,6 +403,7 @@ function showAnswerList(answers){
 	</div>`;
 	}
 	$field.html(text);
+	$field2.html("");
 }
 
 function showQuestionList(questions){
@@ -466,6 +468,7 @@ function showQuestionList(questions){
 			
 	}
 	$field.html(text);
+	$field2.html("");
 }
 
 
@@ -561,6 +564,7 @@ function showUpdateContent(myInfo){
 		<script src="`+contextPath+`/static/js/mypage/myUpdateInfo.js"></script>`
 
 	$field.html(text);
+	$field2.html("");
 }
 
 function showLikeQList(questions){
@@ -625,6 +629,7 @@ function showLikeQList(questions){
 			
 	}
 	$field.html(text);
+	$field2.html("");
 }
 
 
@@ -700,6 +705,7 @@ function showLikeAList(answers){
 	</div>`;
 	}
 	$field.html(text);
+	$field2.html("");
 }
 
 
